@@ -1,20 +1,3 @@
-<script setup>
-import { provide, ref, readonly } from "vue";
-import TodoList from "./components/TodoList.vue";
-import TodoForm from "./components/TodoForm.vue";
-
-const todoList = ref(["Learn vue"]);
-
-function updateTodoList(newList) {
-  todoList.value = newList;
-}
-
-provide("todoList", {
-  todoList: readonly(todoList),
-  updateTodoList,
-});
-</script>
-
 <template>
   <main class="main">
     <div class="wrapper-div">
@@ -38,6 +21,23 @@ provide("todoList", {
     </div>
   </main>
 </template>
+
+<script setup>
+import { provide, ref, readonly } from "vue";
+import TodoList from "./components/TodoList.vue";
+import TodoForm from "./components/TodoForm.vue";
+
+const todoList = ref(["Learn vue"]);
+
+function updateTodoList(newList) {
+  todoList.value = newList;
+}
+
+provide("todoList", {
+  todoList: readonly(todoList),
+  updateTodoList,
+});
+</script>
 
 <style scoped>
 main {
