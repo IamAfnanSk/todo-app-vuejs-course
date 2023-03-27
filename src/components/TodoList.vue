@@ -1,12 +1,16 @@
 <template>
   <ul class="todo-list-ul">
-    <li class="todo-list-li">
-      <p>Add multiple li</p>
+    <li class="todo-list-li" v-for="(todo, index) in todoList">
+      <p :key="index">{{ todo }}</p>
     </li>
   </ul>
 </template>
 
-<script setup></script>
+<script setup>
+import { inject } from "vue";
+
+const { todoList } = inject("todoList");
+</script>
 
 <style scoped>
 .todo-list-ul,
