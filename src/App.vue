@@ -3,7 +3,9 @@
 </template>
 
 <script setup>
+import { provide, ref, readonly } from "vue";
 import TodoList from "./components/TodoList.vue";
+
 const todoList = ref(["Learn vue"]);
 
 function updateTodoList(newList) {
