@@ -6,7 +6,12 @@
 
         <p>{{ 5 }} TODO</p>
       </div>
-      <div class="todolist-div" id="todo-div">
+
+      <div class="todolist-div" id="todo-form-div">
+        <TodoForm />
+      </div>
+
+      <div v-if="todoList.length" class="todolist-div" id="todo-div">
         <TodoList />
       </div>
     </div>
@@ -16,6 +21,7 @@
 <script setup>
 import { provide, ref, readonly } from "vue";
 import TodoList from "./components/TodoList.vue";
+import TodoForm from "./components/TodoForm.vue";
 
 const todoList = ref(["Learn vue"]);
 
