@@ -6,7 +6,10 @@
 
         <p>{{ 5 }} TODO</p>
       </div>
-      <div class="todolist-div" id="todo-div">
+
+      <div class="todolist-div" id="todo-form-div"></div>
+
+      <div v-if="todoList.length" class="todolist-div" id="todo-div">
         <TodoList />
       </div>
     </div>
