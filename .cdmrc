@@ -1,4 +1,4 @@
 terminals: ["npm install && npm run dev"]
-tabs: ["src/App.vue", "src/TodoList.vue"]
+tabs: ["src/App.vue", "src/components/TodoList.vue"]
 playground-view: "terminal-editor-browser"
 live-reload-browser: false
