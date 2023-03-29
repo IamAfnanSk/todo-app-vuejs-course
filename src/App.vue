@@ -4,7 +4,9 @@
       <div class="title-div" id="title-div">
         <h1>Todo List App</h1>
 
-        <p v-if="todoList.length">{{ todoList.length }} TODO</p>
+        <p id="number-of-todos" v-if="todoList.length">
+          {{ todoList.length }} TODO
+        </p>
       </div>
 
       <div class="todolist-div" id="todo-form-div">
