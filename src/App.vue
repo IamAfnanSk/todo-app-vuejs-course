@@ -11,7 +11,7 @@
         <TodoForm />
       </div>
 
-      <div v-if="todoList.length" class="todolist-div" id="todo-div">
+      <div class="todolist-div" id="todo-div">
         <TodoList />
       </div>
     </div>
