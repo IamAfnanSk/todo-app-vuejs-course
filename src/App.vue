@@ -19,11 +19,13 @@
 </template>
 
 <script setup>
-import { provide, ref, readonly } from "vue";
+import { provide, toRefs, readonly } from "vue";
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 
-const todoList = ref(["Learn vue"]);
+const props = defineProps(["todoList"]);
+
+const { todoList } = toRefs(props);
 
 function updateTodoList(newList) {
   todoList.value = newList;
