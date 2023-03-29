@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import { inject, toRefs, ref } from "vue";
+import { inject, toRefs } from "vue";
 import TodoDelete from "./TodoDelete.vue";
 
 const props = defineProps({

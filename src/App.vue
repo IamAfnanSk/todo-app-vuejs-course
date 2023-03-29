@@ -4,19 +4,15 @@
       <div class="title-div" id="title-div">
         <h1>Todo List App</h1>
 
-        <p v-if="todoList.length">{{ todoList.length }} TODO</p>
+        <p id="number-of-todos">{{ 5 }} TODO</p>
       </div>
 
       <div class="todolist-div" id="todo-form-div">
         <TodoForm />
       </div>
 
-      <div v-if="todoList.length" class="todolist-div" id="todo-div">
+      <div class="todolist-div" id="todo-div">
         <TodoList />
-      </div>
-
-      <div v-else class="todolist-div" id="no-todo-div">
-        <p>No todo items to show</p>
       </div>
     </div>
   </main>
